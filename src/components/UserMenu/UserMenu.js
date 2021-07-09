@@ -20,10 +20,6 @@ const styles = {
 export default function UserMenu() {
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getUserName);
-  console.log(
-    `useSelector(state => state)`,
-    useSelector((state) => state)
-  );
   const onLogOut = useCallback(() => {
     dispatch(authOperations.logOut());
   }, [dispatch]);
